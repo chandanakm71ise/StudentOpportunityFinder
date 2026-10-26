@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #243b80, #5145cd);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #243b80;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #5145cd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #243b80;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #d5dbe5;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: #5145cd;
+    margin-top: 0;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.card span {
+    display: inline-block;
+    background-color: #e8e7ff;
+    color: #39318f;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+#message {
+    color: #b42318;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+}
+
+@media (max-width: 500px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Opportunity Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Opportunity Finder</h1>
+        <p>Find internships, hackathons and scholarships</p>
+    </header>
+
+    <main>
+        <h2>Find Your Opportunity</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search opportunities..."
+            >
+            <button onclick="searchOpportunities()">Search</button>
+        </div>
+
+        <p id="message"></p>
+
+        <section id="opportunities">
+
+            <div class="card">
+                <h3>Python Internship</h3>
+                <p>Learn Python and gain practical experience.</p>
+                <span>Internship</span>
+            </div>
+
+            <div class="card">
+                <h3>Student Hackathon</h3>
+                <p>Build projects, solve problems and work with a team.</p>
+                <span>Hackathon</span>
+            </div>
+
+            <div class="card">
+                <h3>Scholarship Opportunity</h3>
+                <p>Explore financial support for college students.</p>
+                <span>Scholarship</span>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Student Opportunity Finder | Built by Students</p>
+    </footer>
+    <script>
+function searchOpportunities() {
+    const input = document.getElementById("search").value.toLowerCase().trim();
+    const cards = document.querySelectorAll(".card");
+    let found = 0;
+
+    cards.forEach(function(card) {
+        if (card.innerText.toLowerCase().includes(input)) {
+            card.style.display = "";
+            found++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    const message = document.getElementById("message");
+
+if (found === 0) {
+    message.textContent = "No opportunities found. Try another keyword.";
+} else {
+    message.textContent = found + " opportunities found.";
+}
+}
+</script>
+</body>
+</html>
